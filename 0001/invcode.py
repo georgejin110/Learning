@@ -17,19 +17,15 @@ def Run():
 	try:
 		arg1, arg2 = int(arg1), int(arg2)
 	except ValueError, e:
-		print arg1, arg2+' are strings.', e
-		print "Please input two NUMBERS."
-	if len(sys.argv)!=3:
-		print "Error! 2 argument required.", "("+str(len(sys.argv)), "given)."
-
-	inv_code(arg1, arg2)
-	
+		print arg1, arg2+' are strings. ', e, '\nPlease input two NUMBERS.'
+	else:
+		if len(sys.argv)!=3:
+			print "Error! 2 argument required.", "("+str(len(sys.argv)-1), "given)"
+		else:
+			inv_code(arg1, arg2)
 
 if __name__ == '__main__':
 	Run()
-	
-
-# print inv_code(10)
 
 
 
