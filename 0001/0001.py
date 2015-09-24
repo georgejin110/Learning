@@ -4,11 +4,12 @@
 import random, string, sys
 
 def inv_code(count,number):
+	f = open("code.txt", "wb")
 	chars = string.digits + string.uppercase
 	i = 0
 	while i < count:
 		s = [random.choice(chars) for n in range(number)]
-		print (''.join(s) + '\n')
+		f.write(''.join(s) + '\n')
 		i += 1
 
 def Run():
@@ -20,15 +21,15 @@ def Run():
 		print "Please input two NUMBERS."
 	if len(sys.argv)!=3:
 		print "Error! 2 argument required.", "("+str(len(sys.argv)), "given)."
-	else:
-		inv_code(arg1, arg2)
+
+	inv_code(arg1, arg2)
 	
 
 if __name__ == '__main__':
 	Run()
-
-# f = open("code.txt", "wb")		
+	
 
 # print inv_code(10)
+
 
 
