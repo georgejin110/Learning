@@ -89,6 +89,7 @@ def Run():
 			if i != None:
 				f.write(''.join(i)+'\n')
 	f.close()
+	
 if __name__ == "__main__":
 	Run()
 
