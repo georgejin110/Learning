@@ -5,10 +5,6 @@ import urllib2
 import json
 import sys
 
-reload(sys)
-sys.setdefaultencoding('utf-8')
-
-
 def getHTML(urls):
 	htmlfile = urllib2.urlopen(urls)
 	htmltext = htmlfile.read()
@@ -69,8 +65,11 @@ def TotalBuildingArea(xiaoqudata):
 		pass
 
 
+reload(sys)
+sys.setdefaultencoding('utf-8')
 url = "http://www.shfg.gov.cn/i/wygl/xq/?id="
 f = open("xiaoquinfo.txt", "wb")
+
 
 def Run():
 	for page_number in range(30000000,30002000):
