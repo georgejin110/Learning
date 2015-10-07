@@ -8,6 +8,6 @@
 
 shfg.py #爬虫
 
-smzdm
+smzdm.py
 
 updated...
